@@ -6,6 +6,18 @@ Necessário ter instalado um compilador de linguagem C++ e o make.
 ```shell
 sudo apt install build-essential cmake
 ```
+## Pert/Cpm
+O PERT (Program Evaluation and Review Technique) e o CPM (Critical Path Method) são técnicas de gerenciamento de projetos que servem para planejar, programar e controlar as atividades de um projeto. Eles ajudam a identificar o caminho crítico, que é a sequência de atividades que determina a duração total do projeto, bem como alocar recursos de forma eficaz, acompanhar o progresso e garantir que o projeto seja concluído dentro do prazo e do orçamento. Essas técnicas são amplamente utilizadas em diversos setores para melhorar a eficiência e a gestão de projetos complexos.
+
+## Observações para chegar a solução
+O algoritmo Pert realizado nesse programa funciona da seguinte forma:
+
+- **Cálculo do Tempo Mais Cedo (Early Start):** O algoritmo começa a partir do vértice inicial, utilizando uma busca em largura (BFS). Nesse processo, ele verifica os sucessores de cada atividade, assegurando que só adicione uma atividade à fila quando todos os antecessores dela já foram vistos durante a BFS. Isso garante que o tempo mais cedo seja calculado com precisão, considerando as dependências entre as atividades.
+
+- **Cálculo do Tempo Mais Tarde (Late Start):** Após determinar os tempos mais cedo, o algoritmo inicia outra BFS a partir do vértice final. Aqui, ele observa os antecessores de cada atividade, certificando-se de que todos os sucessores já tenham seus tempos mais tarde calculados antes de determinar o tempo mais tarde para uma atividade específica. Isso permite estabelecer o tempo limite para a conclusão de cada atividade, sem atrasar o projeto como um todo.
+
+- **CPM (Caminho Crítico):** Após a execução do Pert, é possível identificar o caminho crítico verificando os vértices cujos tempos mais cedo e mais tarde são iguais. Isso significa que essas atividades estão no caminho crítico do projeto, onde qualquer atraso em uma delas impactará diretamente o prazo de conclusão do projeto como um todo.
+
 ## Parte 1 - Compilação:
 
 Para compilar o programa, navegue até o diretório atual onde se encontram os arquivos correspondentes do programa, usando o terminal. Agora, basta executar o seguinte comando:

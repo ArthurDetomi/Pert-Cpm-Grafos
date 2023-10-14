@@ -1,0 +1,14 @@
+
+  Tempos mais cedo e mais tarde:
+ vr  cedo  tarde
+  1   0    0
+  2   7   16
+  3   5   10
+  4   7    7
+  5  10   19
+  6  15   15
+  7  22   22
+  8  26   26
+
+Caminho Crítico:
+1 -> 4 -> 6 -> 7 -> 8
